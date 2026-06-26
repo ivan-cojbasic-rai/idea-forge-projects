@@ -5,85 +5,49 @@
     "lastUpdated": "2026-06-26",
     "description": "",
     "keywords": [],
-    "jiraProjectKey": "ACD"
+    "jiraProjectKey": "PT3G"
   },
   "ideas": [
     {
-      "id": "idea-dummy-epic",
-      "title": "Dummy Epic",
+      "id": "idea-user-authentication-epic",
+      "title": "User Authentication System",
       "type": "Epic",
-      "state": "pushed",
+      "state": "ready",
       "acceptanceCriteria": [
-        "Epic is created and visible in the project",
-        "Child tasks are properly linked to the epic"
+        "Users can securely log in to the platform",
+        "Users can reset forgotten passwords",
+        "Authentication system is integrated with the application"
       ],
-      "description": "A placeholder epic for demonstration purposes",
-      "tags": [
-        "dummy",
-        "placeholder"
-      ],
-      "jiraKey": "PT3G-85",
-      "jiraSyncHistory": [
-        {
-          "action": "created",
-          "timestamp": "2026-06-26T13:37:21.582Z",
-          "jira_key": "PT3G-85",
-          "error": null,
-          "created_by": "ivan_cojbasic@revenue.ai"
-        }
-      ]
+      "description": "Build a comprehensive authentication system to allow users to access the platform securely."
     },
     {
-      "id": "idea-dummy-task-1",
-      "title": "Dummy Task 1",
-      "type": "Task",
-      "state": "pushed",
+      "id": "idea-user-login",
+      "title": "Implement User Login Functionality",
+      "type": "Story",
+      "state": "ready",
+      "parentId": "idea-user-authentication-epic",
       "acceptanceCriteria": [
-        "Task is created",
-        "Task is linked to the epic"
+        "Users can enter email and password on login page",
+        "System validates credentials against user database",
+        "Successful login redirects user to dashboard",
+        "Failed login shows appropriate error message"
       ],
-      "description": "First dummy task under the epic",
-      "parentId": "idea-dummy-epic",
-      "tags": [
-        "dummy",
-        "placeholder"
-      ],
-      "jiraKey": "PT3G-86",
-      "jiraSyncHistory": [
-        {
-          "action": "created",
-          "timestamp": "2026-06-26T13:37:22.839Z",
-          "jira_key": "PT3G-86",
-          "error": null,
-          "created_by": "ivan_cojbasic@revenue.ai"
-        }
-      ]
+      "description": "Enable users to securely log into the platform using their email and password credentials."
     },
     {
-      "id": "idea-dummy-task-2",
-      "title": "Dummy Task 2",
-      "type": "Task",
-      "state": "pushed",
+      "id": "idea-password-reset",
+      "title": "Implement Password Reset Flow",
+      "type": "Story",
+      "state": "ready",
+      "parentId": "idea-user-authentication-epic",
       "acceptanceCriteria": [
-        "Task is created",
-        "Task is linked to the epic"
+        "Users can request password reset from login page",
+        "Reset email is sent to user's registered email address",
+        "Reset link is valid for 24 hours",
+        "Users can set a new password through reset link",
+        "User is notified when password is successfully changed"
       ],
-      "description": "Second dummy task under the epic",
-      "parentId": "idea-dummy-epic",
-      "tags": [
-        "dummy",
-        "placeholder"
-      ],
-      "jiraKey": "PT3G-87",
-      "jiraSyncHistory": [
-        {
-          "action": "created",
-          "timestamp": "2026-06-26T13:37:23.964Z",
-          "jira_key": "PT3G-87",
-          "error": null,
-          "created_by": "ivan_cojbasic@revenue.ai"
-        }
-      ]
+      "description": "Allow users to securely reset their password if they forget it."
     }
   ],
   "ingestionLog": [],
