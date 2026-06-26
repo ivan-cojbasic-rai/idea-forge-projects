@@ -12,19 +12,29 @@
       "id": "idea-user-authentication-epic",
       "title": "User Authentication System",
       "type": "Epic",
-      "state": "ready",
+      "state": "pushed",
       "acceptanceCriteria": [
         "Users can securely log in to the platform",
         "Users can reset forgotten passwords",
         "Authentication system is integrated with the application"
       ],
-      "description": "Build a comprehensive authentication system to allow users to access the platform securely."
+      "description": "Build a comprehensive authentication system to allow users to access the platform securely.",
+      "jiraKey": "PT3G-88",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T14:31:30.276Z",
+          "jira_key": "PT3G-88",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
+      ]
     },
     {
       "id": "idea-user-login",
       "title": "Implement User Login Functionality",
       "type": "Story",
-      "state": "ready",
+      "state": "pushed",
       "parentId": "idea-user-authentication-epic",
       "acceptanceCriteria": [
         "Users can enter email and password on login page",
@@ -32,13 +42,23 @@
         "Successful login redirects user to dashboard",
         "Failed login shows appropriate error message"
       ],
-      "description": "Enable users to securely log into the platform using their email and password credentials."
+      "description": "Enable users to securely log into the platform using their email and password credentials.",
+      "jiraKey": "PT3G-89",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T14:31:31.656Z",
+          "jira_key": "PT3G-89",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
+      ]
     },
     {
       "id": "idea-password-reset",
       "title": "Implement Password Reset Flow",
       "type": "Story",
-      "state": "ready",
+      "state": "pushed",
       "parentId": "idea-user-authentication-epic",
       "acceptanceCriteria": [
         "Users can request password reset from login page",
@@ -47,7 +67,17 @@
         "Users can set a new password through reset link",
         "User is notified when password is successfully changed"
       ],
-      "description": "Allow users to securely reset their password if they forget it."
+      "description": "Allow users to securely reset their password if they forget it.",
+      "jiraKey": "PT3G-90",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T14:31:33.213Z",
+          "jira_key": "PT3G-90",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
+      ]
     }
   ],
   "ingestionLog": [],
