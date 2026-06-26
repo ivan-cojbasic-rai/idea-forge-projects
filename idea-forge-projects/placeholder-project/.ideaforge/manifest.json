@@ -12,7 +12,7 @@
       "id": "idea-dummy-epic",
       "title": "Dummy Epic",
       "type": "Epic",
-      "state": "ready",
+      "state": "pushed",
       "acceptanceCriteria": [
         "Epic is created and visible in the project",
         "Child tasks are properly linked to the epic"
@@ -21,13 +21,23 @@
       "tags": [
         "dummy",
         "placeholder"
+      ],
+      "jiraKey": "PT3G-85",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T13:37:21.582Z",
+          "jira_key": "PT3G-85",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
       ]
     },
     {
       "id": "idea-dummy-task-1",
       "title": "Dummy Task 1",
       "type": "Task",
-      "state": "ready",
+      "state": "pushed",
       "acceptanceCriteria": [
         "Task is created",
         "Task is linked to the epic"
@@ -37,13 +47,23 @@
       "tags": [
         "dummy",
         "placeholder"
+      ],
+      "jiraKey": "PT3G-86",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T13:37:22.839Z",
+          "jira_key": "PT3G-86",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
       ]
     },
     {
       "id": "idea-dummy-task-2",
       "title": "Dummy Task 2",
       "type": "Task",
-      "state": "ready",
+      "state": "pushed",
       "acceptanceCriteria": [
         "Task is created",
         "Task is linked to the epic"
@@ -53,6 +73,16 @@
       "tags": [
         "dummy",
         "placeholder"
+      ],
+      "jiraKey": "PT3G-87",
+      "jiraSyncHistory": [
+        {
+          "action": "created",
+          "timestamp": "2026-06-26T13:37:23.964Z",
+          "jira_key": "PT3G-87",
+          "error": null,
+          "created_by": "ivan_cojbasic@revenue.ai"
+        }
       ]
     }
   ],
