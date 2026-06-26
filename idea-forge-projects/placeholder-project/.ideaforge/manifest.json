@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "projectId": "placeholder-project",
+    "projectName": "placeholder-project",
+    "lastUpdated": "2026-06-26",
+    "description": "",
+    "keywords": [],
+    "jiraProjectKey": "PT3G"
+  },
+  "ideas": [
+    {
+      "id": "idea-dummy-epic",
+      "title": "Dummy Epic",
+      "type": "Epic",
+      "state": "ready",
+      "acceptanceCriteria": [
+        "Epic is created and visible in the project",
+        "Child tasks are properly linked to the epic"
+      ],
+      "description": "A placeholder epic for demonstration purposes",
+      "tags": [
+        "dummy",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "idea-dummy-task-1",
+      "title": "Dummy Task 1",
+      "type": "Task",
+      "state": "ready",
+      "acceptanceCriteria": [
+        "Task is created",
+        "Task is linked to the epic"
+      ],
+      "description": "First dummy task under the epic",
+      "parentId": "idea-dummy-epic",
+      "tags": [
+        "dummy",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "idea-dummy-task-2",
+      "title": "Dummy Task 2",
+      "type": "Task",
+      "state": "ready",
+      "acceptanceCriteria": [
+        "Task is created",
+        "Task is linked to the epic"
+      ],
+      "description": "Second dummy task under the epic",
+      "parentId": "idea-dummy-epic",
+      "tags": [
+        "dummy",
+        "placeholder"
+      ]
+    }
+  ],
+  "ingestionLog": [],
+  "unassignedQueue": [],
+  "jiraPushQueue": [],
+  "auditLog": []
+}
