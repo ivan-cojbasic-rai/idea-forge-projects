@@ -120,7 +120,7 @@ If the user wants to start a brand-new project (you are in an empty or un-initia
 3. Start with empty `"ideas": []` and empty `ingestionLog`, `unassignedQueue`, `jiraPushQueue`, `auditLog` arrays.
 4. Leave `jiraProjectKey`/`jiraProjectId` out until the project is linked to Jira from the extension.
 
-The VS Code extension exposes an **"Initialize IdeaForge Project"** button that scaffolds the same file, so a manifest you create is immediately visible there (and vice-versa).
+The VS Code extension exposes a **"Create New Project"** action (creates a new `idea-forge-projects/<id>/.ideaforge/manifest.json` subfolder and switches to it) and an **"Initialize IdeaForge Project"** action (sets up the current folder). Both scaffold the same manifest shape, so a project you create is immediately visible there — and vice-versa.
 
 ## Skills
 
