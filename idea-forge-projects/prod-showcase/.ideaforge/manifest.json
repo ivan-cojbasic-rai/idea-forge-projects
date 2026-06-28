@@ -2,11 +2,73 @@
   "meta": {
     "projectId": "prod-showcase",
     "projectName": "prod-showcase",
-    "lastUpdated": "2026-06-27",
+    "lastUpdated": "2026-06-28",
     "description": "",
-    "keywords": []
+    "keywords": [],
+    "jiraProjectKey": "PT3G",
+    "jiraProjectId": "10535"
   },
-  "ideas": [],
+  "ideas": [
+    {
+      "id": "idea-placeholder-epic",
+      "title": "Placeholder Epic",
+      "type": "Epic",
+      "state": "not_ready",
+      "acceptanceCriteria": [
+        "Placeholder epic is replaced with a real initiative before being pushed to Jira"
+      ],
+      "description": "Placeholder epic created to scaffold the prod-showcase backlog for demo purposes. Replace with a real initiative once scope is defined.",
+      "tags": [
+        "placeholder",
+        "demo"
+      ]
+    },
+    {
+      "id": "idea-placeholder-story-1",
+      "title": "Placeholder Story 1",
+      "type": "Story",
+      "state": "not_ready",
+      "parentId": "idea-placeholder-epic",
+      "acceptanceCriteria": [
+        "Placeholder criterion - replace with real acceptance criteria"
+      ],
+      "description": "Placeholder story 1 under the placeholder epic.",
+      "tags": [
+        "placeholder",
+        "demo"
+      ]
+    },
+    {
+      "id": "idea-placeholder-story-2",
+      "title": "Placeholder Story 2",
+      "type": "Story",
+      "state": "not_ready",
+      "parentId": "idea-placeholder-epic",
+      "acceptanceCriteria": [
+        "Placeholder criterion - replace with real acceptance criteria"
+      ],
+      "description": "Placeholder story 2 under the placeholder epic.",
+      "tags": [
+        "placeholder",
+        "demo"
+      ]
+    },
+    {
+      "id": "idea-placeholder-story-3",
+      "title": "Placeholder Story 3",
+      "type": "Story",
+      "state": "not_ready",
+      "parentId": "idea-placeholder-epic",
+      "acceptanceCriteria": [
+        "Placeholder criterion - replace with real acceptance criteria"
+      ],
+      "description": "Placeholder story 3 under the placeholder epic.",
+      "tags": [
+        "placeholder",
+        "demo"
+      ]
+    }
+  ],
   "ingestionLog": [],
   "unassignedQueue": [],
   "jiraPushQueue": [],
