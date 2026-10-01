@@ -1,0 +1,66 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for rai-product-description.
+# Team overrides:     {project-root}/_bmad/custom/rai-product-description.toml
+# Personal overrides: {project-root}/_bmad/custom/rai-product-description.user.toml
+
+[workflow]
+
+# --- Configurable below. Overrides merge per BMad structural rules: ---
+#   scalars: override wins • arrays (persistent_facts, activation_steps_*): append
+#   arrays-of-tables with `code`/`id`: replace matching items, append new ones.
+
+# Steps to run before the standard activation (config load, greet).
+# Overrides append. Use for pre-flight loads, compliance checks, etc.
+
+activation_steps_prepend = []
+
+# Steps to run after greet but before Stage 1 of the workflow.
+# Overrides append. Use for context-heavy setup that should happen
+# once the user has been acknowledged.
+
+activation_steps_append = []
+
+# Persistent facts the workflow keeps in mind for the whole run
+# (standards, compliance constraints, stylistic guardrails).
+# Distinct from the runtime memory sidecar -- these are static context
+# loaded on activation. Overrides append.
+#
+# Each entry is either:
+#   - a literal sentence, e.g. "All briefs must include a regulatory-risk section."
+#   - a file reference prefixed with `file:`, e.g. "file:{project-root}/docs/standards.md"
+#     (glob patterns are supported; the file's contents are loaded and treated as facts).
+
+persistent_facts = ["file:{project-root}/**/project-context.md"]
+
+# Instruction executed when the workflow reaches its terminal stage, after
+# the main output has been delivered. Override wins. Leave empty for
+# no custom post-completion behavior.
+
+on_complete = ""
+
+# --- Workflow-specific configurables (lifted during Configurability Discovery) ---
+#
+# Templates, output paths, and hooks the builder surfaced with the author.
+# Bare paths resolve from the skill root; use `{project-root}/...` to point
+# at an org-owned resource elsewhere in the repo. Override wins.
+
+# Default document structure. Treated as a starting point -- adapt to the
+# project, don't force every section. Override the path in team/user TOML
+# to enforce a different shape (e.g. a regulated-industry variant).
+product_description_template = "assets/product-description-template.md"
+
+# Run folder location. The document (and its .memlog.md) lands inside
+# `{product_description_output_path}/{run_folder_pattern}/`. Resume-check
+# scans `{product_description_output_path}` for a prior unfinished run
+# matching the named project.
+product_description_output_path = "{planning_artifacts}/product-descriptions"
+run_folder_pattern = "roundup-{project_name}-{date}"
+
+# Document standards applied at finalize. Each entry is a `skill:`, `file:`,
+# or plain-text directive; the parent LLM applies the findings before the
+# user sees the draft. Append-only: base entries cannot be removed.
+doc_standards = [
+  "skill:bmad-editorial-review-structure",
+  "skill:bmad-editorial-review-prose",
+]

@@ -1,0 +1,58 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Workflow customization surface for rai-doc-audit.
+# Team overrides:     {project-root}/_bmad/custom/rai-doc-audit.toml
+# Personal overrides: {project-root}/_bmad/custom/rai-doc-audit.user.toml
+
+[workflow]
+
+# --- Configurable below. Overrides merge per BMad structural rules: ---
+#   scalars: override wins • arrays (persistent_facts, activation_steps_*): append
+#   arrays-of-tables with `code`/`id`: replace matching items, append new ones.
+
+activation_steps_prepend = []
+activation_steps_append = []
+persistent_facts = ["file:{project-root}/**/project-context.md"]
+on_complete = ""
+
+# --- Workflow-specific configurables ---
+
+# Where an audit run's workspace (triage.json, triage-report.md) lands.
+# Resume-check scans this path for a prior unfinished run.
+audit_output_path = "{planning_artifacts}/doc-audits"
+run_folder_pattern = "audit-{project_name}-{date}"
+
+# The project's current name and every name it has previously carried.
+# Update this when the project renames again -- detect-name-drift.py flags
+# any doc still using an entry from legacy_project_names, or whose
+# frontmatter `project` field disagrees with current_project_name.
+current_project_name = "Idea Frog"
+legacy_project_names = [
+  "Auto Backlog Generation",
+  "The Conduit",
+  "BMAD Backlog Generation",
+]
+
+# Extra directory names to exclude from discovery, beyond the script's
+# built-in VCS/build/dependency/vendored-tooling defaults. Append-only.
+excluded_dirs = []
+
+# Routing table: doc kind -> the skill that owns updating a stale doc of
+# that kind. This skill never edits content itself -- it routes. Matched
+# by `code` against each item's judged kind; unmatched kinds get no route
+# and are reported as needing manual review.
+[[workflow.doc_routes]]
+code = "prd"
+route = "skill:bmad-prd"
+
+[[workflow.doc_routes]]
+code = "product-brief"
+route = "skill:bmad-product-brief"
+
+[[workflow.doc_routes]]
+code = "architecture"
+route = "skill:bmad-architecture"
+
+[[workflow.doc_routes]]
+code = "project-overview"
+route = "skill:bmad-document-project"
